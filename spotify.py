@@ -32,11 +32,13 @@ params = {
 def getTopTracks(artist_ID):
     top_tracks=[]
     BASE_URL='https://api.spotify.com/v1/artists/'
+    
     artist_ID=artist_ID
     search = requests.get(BASE_URL+artist_ID+'/top-tracks', headers=headers, params=params)
+    
     for track in search.json()['tracks']:
         top_tracks.append({
-            'song_name':'name',
+            'name':track['name'],
             'artist':track['artists'][0]['name'],
             'image':track['album']['images']
             
@@ -44,7 +46,3 @@ def getTopTracks(artist_ID):
         
     return top_tracks
 
-artist = getTopTracks('0gxyHStUsqpMadRV0Di1Qt')
-for i in range(len(artist)):
-    print(i)
-    print(artist[i])
