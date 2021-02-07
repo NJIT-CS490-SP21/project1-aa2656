@@ -12,6 +12,7 @@ def hello_world():
     return render_template(
         'index.html',
         rand_song = random.choice(random_top_track),
+        none = None
         )
 
 

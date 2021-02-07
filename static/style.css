@@ -4,3 +4,15 @@ body{
     font-size: 32px;
     background-color:lightblue;
 }
+
+
+audio{
+    margin: 0 auto;
+    padding-bottom:5px;
+    display:block;
+}
+.warn{
+    margin-top:15px;
+    margin-bottom:15px;
+    font-size:25px;
+}

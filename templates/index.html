@@ -7,15 +7,16 @@
 
 <body>
     <h1>{{  rand_song['name']  }}</h1>
-    <audio controls autoplay>
-    
-      <source src={{ rand_song['preview_url'] }}>
-    
-     Your browser does not support the audio element.
-    
-     </audio>
     <h2>By, {{  rand_song['artist'] }}</h2>
     <img src={{ rand_song['image'][0]['url'] }} alt="Image Load Error" width={{ rand_song['image'][0]['width'] }} height={{ rand_song['image'][0]['height'] }}>
+    
+    {% if rand_song['preview'] == None %}
+        <p class="warn">Preview url available</p>
+    {% endif %}
+    <audio controls>
+        <source src={{ rand_song['preview'] }}>
+        Your browser does not support the audio element.
+    </audio>
 </body>
 
 </html>

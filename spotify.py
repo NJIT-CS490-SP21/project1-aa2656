@@ -35,6 +35,7 @@ def getTopTracks(artist_ID):
     
     artist_ID=artist_ID
     search = requests.get(BASE_URL+artist_ID+'/top-tracks', headers=headers, params=params)
+
     for track in search.json()['tracks']:
         try:
             top_tracks.append({
