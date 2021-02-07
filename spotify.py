@@ -35,14 +35,20 @@ def getTopTracks(artist_ID):
     
     artist_ID=artist_ID
     search = requests.get(BASE_URL+artist_ID+'/top-tracks', headers=headers, params=params)
-    
     for track in search.json()['tracks']:
-        top_tracks.append({
-            'name':track['name'],
-            'artist':track['artists'][0]['name'],
-            'image':track['album']['images']
-            
-        })
+        try:
+            top_tracks.append({
+                'name':track['name'],
+                'artist':track['artists'][0]['name'],
+                'image':track['album']['images'],
+                'preview':track['preview_url']
+            })
+        except:
+            top_tracks.append({
+                'name':'Never Gonna Give You Up',
+                'artist':'Rick Astley',
+                'image':'https://i.scdn.co/image/ab67616d0000b273237665d08de01907e82a7d8a',
+                'preview':'https://p.scdn.co/mp3-preview/22bf10aff02db272f0a053dff5c0063d729df988?cid=008468e3cc40485389d5bc87871f2c3c'
+            })
         
     return top_tracks
-
