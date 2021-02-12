@@ -3,8 +3,8 @@ import os
 import random
 import spotify
 
+temp=[]
 app = Flask(__name__)
-
 @app.route('/')
 def hello_world():
     artists = ['0gxyHStUsqpMadRV0Di1Qt','2iEvnFsWxR0Syqu2JNopAd','7cTXfwpe9peK0UE1bZyIWZ']
@@ -12,7 +12,6 @@ def hello_world():
     return render_template(
         'index.html',
         rand_song = random.choice(random_top_track),
-        none = None
         )
 
 

@@ -48,8 +48,7 @@ def getTopTracks(artist_ID):
             top_tracks.append({
                 'name':'Never Gonna Give You Up',
                 'artist':'Rick Astley',
-                'image':'https://i.scdn.co/image/ab67616d0000b273237665d08de01907e82a7d8a',
+                'image':[{'height': 640, 'url': 'https://i.scdn.co/image/ab67616d0000b273237665d08de01907e82a7d8a', 'width': 640}, {'height': 300, 'url': 'https://i.scdn.co/image/ab67616d0000b273237665d08de01907e82a7d8a', 'width': 300}, {'height': 64, 'url': 'https://i.scdn.co/image/ab67616d0000b273237665d08de01907e82a7d8a', 'width': 64}],
                 'preview':'https://p.scdn.co/mp3-preview/22bf10aff02db272f0a053dff5c0063d729df988?cid=008468e3cc40485389d5bc87871f2c3c'
             })
-        
     return top_tracks

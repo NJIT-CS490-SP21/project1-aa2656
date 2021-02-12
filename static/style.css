@@ -1,18 +1,25 @@
 body{
-    margin: auto;
+    margin: 0 auto;
     text-align:center;
     font-size: 32px;
     background-color:lightblue;
 }
 
-
+h1{
+    margin-top:50px;
+}
 audio{
     margin: 0 auto;
-    padding-bottom:5px;
+    margin-bottom:20px;
     display:block;
 }
 .warn{
     margin-top:15px;
     margin-bottom:15px;
     font-size:25px;
+}
+
+img{
+    display:block;
+    margin: 0 auto;
 }
