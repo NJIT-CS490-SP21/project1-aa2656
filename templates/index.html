@@ -17,8 +17,11 @@
     </audio>
     
     <img src={{ rand_song['image'][0]['url'] }} alt="Image Load Error" width={{ rand_song['image'][0]['width'] }} height={{ rand_song['image'][0]['height'] }}>
-    
-    
+    {% if rand_song_lyrics_url == None %}
+        <p class="warn">Lyrics not available for this song :(</p>
+    {% else %}
+        <a class="lyrics_url" href={{ rand_song_lyrics_url }}>{{  rand_song['name']  }} Lyrics</a>
+    {% endif %}
 </body>
 
 </html>
