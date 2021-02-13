@@ -16,7 +16,7 @@ def hello_world():
 
 
 app.run(
-    port = 8080,
+    port = int(os.environ.get('PORT', 8080)),
     host=os.getenv('IP','0.0.0.0'),
     debug=True
 )
