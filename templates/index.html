@@ -16,13 +16,11 @@
         Your browser does not support the audio element.
     </audio>
     
-    <img src={{ rand_song['image'][0]['url'] }} alt="Image Load Error" width={{ rand_song['image'][0]['width'] }} height={{ rand_song['image'][0]['height'] }}>
+    <img id='song_img' src={{ rand_song['image'][0]['url'] }} alt="Image Load Error" width={{ rand_song['image'][0]['width']/1.2 }} height={{ rand_song['image'][0]['height']/1.2 }}>
     {% if rand_song_lyrics_url == None %}
         <p class="warn">Lyrics not available for this song :(</p>
     {% else %}
-        <a class="lyrics_url" href={{ rand_song_lyrics_url }}>{{  rand_song['name']  }} Lyrics</a>
+        <a class="lyrics_url" target="_blank" href={{ rand_song_lyrics_url }}>{{  rand_song['name']  }} Lyrics</a>
     {% endif %}
 </body>
-
 </html>
-    
